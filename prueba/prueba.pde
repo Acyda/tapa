@@ -117,11 +117,25 @@ void draw(){
               fill(23,69,56,t3);
               text("A  B  S  D   M  U   D  R ",180,t);
               text("  L  U      U   B   L   O  E",180,t2);
-          
         }
       }
     }
   }
-
-
+  if (t>410){
+    if (t2<610){
+      fill(0);
+      stroke(0);
+      triangle(350,545,350,527,334,545);
+      if(mouseX>325){
+        if(mouseY>520){
+          if(mousePressed){
+              p = 1;
+              t = 410;
+              t2 = 610;
+              t3 = 0;
+          }
+        }
+      }
+    }
+  }
 }
