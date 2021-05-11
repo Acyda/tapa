@@ -1,5 +1,5 @@
 PFont tip, albus;
-PImage fondo, de, iz, top, rabbit, Boom, hat;
+PImage fondo, de, iz, top, rabbit, Boom, hat, cuento;
 int movX = -100;
 int movZ = 100;
 int tr = 0;
@@ -9,8 +9,9 @@ int t2 = 610;
 int t3 = 0;
 
 void setup(){
-  size(350,545);
+  size(700,545);
   fondo = loadImage ("fondo.png");
+  cuento = loadImage ("CuentosdeBeedle.jpg");
   albus = loadFont("Constantia-Bold-15.vlw");
   tip = loadFont("SegoeUI-Semilight-40.vlw");
   p = 1;
@@ -89,13 +90,13 @@ void draw(){
           if (mousePressed){
             t++;
             t2--;
-            t3 = t3 + 60;
+         //   t3 = t3 + 60;
           }
         }
       }
     }
   }
-  if(t>508){
+  if(t>507){
      text("A  B  S  D   M  U   D  R ",180,510);
      text("  L  U      U   B   L   O  E",180,510);
     
@@ -105,9 +106,9 @@ void draw(){
   
   
   if (t>410){
-    t++;
-    t2--;
-    t3++;
+    t=t+2;
+    t2=t2-2;
+    t3=t3+4;
   }
   
   if (t>410){
@@ -138,4 +139,6 @@ void draw(){
       }
     }
   }
+  image(cuento,350,0);
+  println(t);
 }
